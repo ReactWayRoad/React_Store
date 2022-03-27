@@ -83,3 +83,7 @@ immutable state based off those changes
 
 **configureStore** - create an empty Redux store.
 
+### RTK query  
+
+**RTK Query** is an advanced data fetching and caching tool, designed to simplify common cases for loading data in a web application.
+
