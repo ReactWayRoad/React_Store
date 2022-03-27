@@ -60,3 +60,26 @@ Redux-thunk vs Redux-saga
 https://medium.com/@shoshanarosenfield/redux-thunk-vs-redux-saga-93fe82878b2d
 
 https://russianblogs.com/article/7913978121/
+
+## Redux Toolkit  
+
+https://redux-toolkit.js.org/
+
+Problems which Redux Toolkit solves:  
+- Configuring a Redux store is too complicated  
+- I have to add a lot of packages to get Redux to do anything useful(Redux-Thunk, DevTools)  
+- Redux requires too much boilerplate code            
+
+Redux requires that we write all state updates immutably, by making copies of data and updating the copies.  
+However, Redux Toolkit's createSlice and createReducer APIs use Immer inside to allow us to write "mutating"  
+update logic that becomes correct immutable updates.  
+
+Immer - https://immerjs.github.io/immer/
+
+Redux Toolkit allows us to write "mutating" logic in reducers. It  
+doesn't actually mutate the state because it uses the Immer library,  
+which detects changes to a "draft state" and produces a brand new  
+immutable state based off those changes
+
+**configureStore** - create an empty Redux store.
+
