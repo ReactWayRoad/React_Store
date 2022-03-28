@@ -59,7 +59,9 @@ Selectors are functions that know how to extract specific pieces of information 
 As an application grows bigger, this can help avoid repeating logic as different parts of the app need to read the same data  
 
 Selector functions receive the whole state object, and should return a value  
-Selectors will re-run whenever the Redux store is updated, and if the data they return has changed, the component will re-render
+Selectors will re-run whenever the Redux store is updated, and if the data they return has changed, the component will re-render  
+
+**the component will re-render any time the value returned from useSelector changes to a new reference.**
 
 ## Redux Application Data Flow  
 
