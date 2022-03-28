@@ -1,4 +1,4 @@
-# React_Store_Middleware
+# React_Redux_Toolkit
 
 **Redux is a pattern and library for managing and updating application state, using events called "actions".**
 
