@@ -1,5 +1,7 @@
 # React_Store_Middleware
 
+**Redux is a pattern and library for managing and updating application state, using events called "actions".**
+
 ## 3 принципа redux   
 
 -  Единый источник истины (Глобальное состояние вашего приложения хранится в дереве объектов в одном магазине .)  
@@ -61,6 +63,8 @@ This makes it effectively impossible to accidentally mutate state in a reducer.
 
 A function that accepts an initial state, an object of reducer functions, and a "slice name",  
 and automatically generates action creators and action types that correspond to the reducers and state.  
+
+Internally, it uses createAction and createReducer, so you may also use Immer to write "mutating" immutable updates:
 
 Each function defined in the reducers argument will have a corresponding action  
 creator generated using createAction and included in the result's actions field using the same function name.
