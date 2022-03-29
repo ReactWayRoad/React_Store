@@ -63,7 +63,13 @@ Selectors will re-run whenever the Redux store is updated, and if the data they 
 
 **the component will re-render any time the value returned from useSelector changes to a new reference.**
 
-## Redux Application Data Flow  
+## Redux Application Data Flow    
+ 
+**Работа Redux**  
+
+Есть **dispatch** в него передаётся **action**, то как action будет изм. состояние определно внутри **reducer**.
+**Reducer**- это чистая функция, которая принимает **state** и **action** и всегда возвращает новый объект состояния.  
+Этот **Reducer** передаётся в **store** и  **store** c помощью провайдера  передаются в реакт компоненты в которых мы исп. это состояние.
 
 ![Screenshot_14](https://user-images.githubusercontent.com/66359081/160368487-5f803e0c-d66b-4e28-81b8-03d2e2627e69.png)
 ![Screenshot_15](https://user-images.githubusercontent.com/66359081/160368689-0bccca74-050e-43e8-badf-83e0b9f47610.png)
@@ -150,6 +156,18 @@ A helper function for defining a Redux action type and creator.
 
 ![Screenshot_17](https://user-images.githubusercontent.com/66359081/160371535-0855d4e5-ef86-4b8c-bbf4-248f49bdd9e9.png)
 ![Screenshot_18](https://user-images.githubusercontent.com/66359081/160371563-9628e8f4-df40-4960-a146-dd12c2ca5be9.png)
+
+ 
+Redux - Библиотека для управления состоянием приложения.
+
+**Работа Redux:**  
+- У нас есть component  в котором мы можем создать action(js объект который отслеживает  конкретное событие происходящее в приложении.У него есть свойство type)  
+  Action может содержать любое кол-во инф
+- потом  передаём Action диспетчеру(функ предоставляемая  библиотекой, которая принимает действия для выполнения action и изменения состояния)
+-  Store(удерживает состоянии приложения и методы для взаимодействия с этим состоянием)
+- функция для изм состояния Reducer(чистая функция , которая возвращает новое состояние)  
+(принимает текущий state приложения и action, а затем возвращает обновлённое состояние.)
+
 
 
 
